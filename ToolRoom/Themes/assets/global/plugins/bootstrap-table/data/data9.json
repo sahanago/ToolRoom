@@ -1,0 +1,63 @@
+[
+  {
+    "ToolBarcodeNumber": 123098765,
+    "Information": "Update in Digital Tool Room",
+    "Name": "Pliers set",
+    "ModelNumber": "PS-2023",
+    "Description": "Versatile set of pliers for gripping and cutting",
+    "Category": "Hand tool",
+    "Status": "Overdue",
+    "ActiveStatus": "Active",
+    "LastBorrowedBy": "Michael Brown",
+    "LastBorrowedDate": "2023-10-01",
+    "ReturnDate": "2023-10-16",
+    "TestingDate": "2023-10-11"
+  },
+  {
+    "ToolBarcodeNumber": 456789012,
+    "Information": "Update from Material Master",
+    "Name": "Measuring tape",
+    "ModelNumber": "MT-2023",
+    "Description": "Flexible measuring tape for accurate measurements",
+    "Category": "Hand tool",
+    "Status": "Returned",
+    "ActiveStatus": "Inactive",
+    "LastBorrowedBy": "Samantha Green",
+    "LastBorrowedDate": "2023-06-01",
+    "ReturnDate": "2023-06-16",
+    "TestingDate": "2023-06-11"
+  },
+  {
+    "ToolBarcodeNumber": 226123908,
+    "Information": "Update in Digital Tool Room",
+    "Name": "Drill machine",
+    "ModelNumber": "DM-2023",
+    "Description": "High-speed cordless drill for various applications",
+    "Category": "Power tool",
+    "Status": "Issued",
+    "ActiveStatus": "Active",
+    "LastBorrowedBy": "Alice Brown",
+    "LastBorrowedDate": "2023-11-01",
+    "ReturnDate": "2023-11-16",
+    "TestingDate": "2023-11-11"
+  },
+  {
+    "ToolBarcodeNumber": 567123908,
+    "Information": "Update in Digital Tool Room",
+    "Name": "Drill machine",
+    "ModelNumber": "DM-2023",
+    "Description": "High-speed cordless drill for various applications",
+    "Category": "Power tool",
+    "Status": "Overdue",
+    "ActiveStatus": "Inactive",
+    "LastBorrowedBy": "Bob White",
+    "LastBorrowedDate": "2023-11-05",
+    "ReturnDate": "2023-11-20",
+    "TestingDate": "2023-11-15"
+  }
+
+
+
+
+
+]

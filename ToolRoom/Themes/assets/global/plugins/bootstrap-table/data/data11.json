@@ -1,0 +1,62 @@
+[
+  {
+    "ToolId": 112,
+    "BorrowerName": "John doe",
+    "ContactDetails": "9009089809",
+    "BorrowedDate": "2023-12-12",
+    "ReturnedDate": "2023-12-13",
+    "ReturnStatus": "Returned"
+  },
+  {
+    "ToolId": 112,
+    "BorrowerName": "Jane smith",
+    "ContactDetails": "9876543210",
+    "BorrowedDate": "2023-12-17",
+    "ReturnedDate": "-",
+    "ReturnStatus": "Issued"
+  },
+
+  {
+    "ToolId": 112,
+    "BorrowerName": "Alice williams",
+    "ContactDetails": "7654321098",
+    "BorrowedDate": "2023-11-30",
+    "ReturnedDate": "2023-12-05",
+    "ReturnStatus": "Returned"
+  },
+
+  {
+    "ToolId": 112,
+    "BorrowerName": "Eva davis",
+    "ContactDetails": "5432109876",
+    "BorrowedDate": "2023-11-20",
+    "ReturnedDate": "2023-11-25",
+    "ReturnStatus": "Returned"
+  },
+  {
+    "ToolId": 112,
+    "BorrowerName": "Grace miller",
+    "ContactDetails": "3210987654",
+    "BorrowedDate": "2023-11-10",
+    "ReturnedDate": "2023-11-15",
+    "ReturnStatus": "Returned"
+  },
+  {
+    "ToolId": 112,
+    "BorrowerName": "Harry jones",
+    "ContactDetails": "2109876543",
+    "BorrowedDate": "2023-11-13",
+    "ReturnedDate": "2023-11-19",
+    "ReturnStatus": "Returned"
+  },
+  
+  {
+    "ToolId": 112,
+    "BorrowerName": "Ivy white",
+    "ContactDetails": "1098765432",
+    "BorrowedDate": "2023-10-31",
+    "ReturnedDate": "2023-11-05",
+    "ReturnStatus": "Returned"
+  }
+  
+]

@@ -1,0 +1,401 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ToolRoom.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Dashboard</title>
+            <link href="Themes/assets/layouts/layout/css/Main.css" rel="stylesheet" />
+<link href="../Themes/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+       
+<link href="../Themes/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+     <link href="../Themes/assets/global/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+<link href="../Themes/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+<link href="../Themes/assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+<link href="../Themes/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" /> 
+         <style>
+    .custom-link {
+        color: #337ab7; /* Bootstrap's primary link color */
+        text-decoration: underline;
+        cursor: pointer;
+    }
+   
+     .page-title small {
+     font-size: 0.7em;
+ }
+ .pull-right {
+    padding-right: 15px;
+   
+}      .form-group {
+    display: flex;
+   
+}
+
+  .form-group label {
+    white-space: nowrap;
+   
+}
+     .text-green {
+        color: green;
+    }
+
+    .text-red {
+        color: red;
+    }
+    .custom-input {
+       background-color: #f2f2f2; /* Set your desired gray color */
+   }
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-md">
+    <form id="form1" runat="server">
+        <div class="page-wrapper">
+            <div class="page-header navbar navbar-fixed-top">
+
+                <div class="page-header-inner ">
+                    <div class="page-logo">
+                        <a href="index.html">
+                            <img src="../Themes/assets/layouts/layout/img/BPCLLogo.png" alt="logo" class="logo-default" />
+                        </a>
+                        <div class="menu-toggler sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="top-menu">
+
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown dropdown-user">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile">Nick </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="page_user_profile_1.html">
+                                            <i class="icon-user"></i>My Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="Login.aspx">
+                                            <i class="icon-key"></i>Log Out </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown dropdown-quick-sidebar-toggler">
+                                <a href="Login.aspx" class="dropdown-toggle">
+                                    <i class="icon-logout"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-container">
+
+                <div class="page-sidebar-wrapper">
+
+                    <div class="page-sidebar navbar-collapse collapse">
+
+                        <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+
+                            <li class="nav-item start active open">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-bar-chart"></i>
+                                    <span class="title">Dashboard</span>
+                                    <span class="selected"></span>
+                                    <span class="arrow open"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item start ">
+                                        <a href="index.html" class="nav-link ">
+                                            <i class="icon-bar-chart"></i>
+                                            <span class="title">Tool Room Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item start active open">
+                                        <a href="dashboard_2.html" class="nav-link ">
+                                            <i class="icon-bulb"></i>
+                                            <span class="title">Maintenance</span>
+                                            <span class="selected"></span>
+                                            <span class="badge badge-success"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-user"></i>
+                                    <span class="title">Manage user</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="user.aspx" class="nav-link ">
+                                            <span class="title">List of users</span>
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class=" icon-wrench"></i>
+                                    <span class="title">Manage inventory</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="Listtool.aspx" class="nav-link ">
+                                            <span class="title">List of tools</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item  ">
+                                        <a href="ListTools.aspx" class="nav-link ">
+                                            <span class="title">List of vechicles</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class=" icon-wrench"></i>
+                                    <span class="title">Manage tools</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="Issuetool.aspx" class="nav-link ">
+                                            <span class="title">Issue tool</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="components_color_pickers.html" class="nav-link ">
+                                            <span class="title">Return tool</span>
+                                            <span class="badge badge-danger"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="components_select2.html" class="nav-link ">
+                                            <span class="title">Issue fuel</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-docs"></i>
+                                    <span class="title">Reports</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="form_controls.html" class="nav-link ">
+                                            <span class="title">Inventory by category</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="form_controls_md.html" class="nav-link ">
+                                            <span class="title">Inventory by grade</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="form_validation.html" class="nav-link ">
+                                            <span class="title">Tools due for testing</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="form_validation_states_md.html" class="nav-link ">
+                                            <span class="title">Tools due to be returned</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-docs"></i>
+                                    <span class="title">Admin tasks</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a href="elements_steps.html" class="nav-link ">
+                                            <span class="title">Send emails for testing due</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="elements_lists.html" class="nav-link ">
+                                            <span class="title">Send emails for return of tools</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="Help.aspx" class="nav-link">
+                                    <i class="icon-question"></i>
+                                    <span class="title">Help</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="page-content-wrapper">
+                        <div class="page-content">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="page-footer">
+                        <div class="page-footer-inner">
+                            2023 &copy; <a href="https://www.bharatpetroleum.in/">Bharat Petroleum Corporation Limited</a>              
+                        </div>
+                        <div class="scroll-to-top">
+                            <i class="icon-arrow-up"></i>
+                        </div>
+                    </div>
+                </div>
+    </form>
+        
+      
+
+         
+    
+      <script>
+          function statusCell(value, row, index, field) {
+              if (value == 'Inactive') {
+                  return {
+                      classes: 'text-red',
+                  };
+              }
+              return {};
+          }
+      </script>
+
+
+<script>
+    function statusCellStyle(value, row, index, field) {
+        if (value === 'Overdue') {
+            return {
+                classes: 'text-red', // Add a class for red color
+            };
+        }
+        return {}; // Return empty object for other cases
+    }
+</script>
+
+         
+        
+    
+
+    <script>
+        // Set the current date as the minimum date and set the maximum date to 2030-12-31
+        var currentDate = new Date().toISOString().split('T')[0];
+        var maxDate = '2024-12-31';
+
+        // Set the minimum and maximum attributes for issueDate
+        document.getElementById('Testingdate').setAttribute('min', currentDate);
+        document.getElementById('Testingdate').setAttribute('max', maxDate);
+
+        // Set the minimum and maximum attributes for returnDate
+        document.getElementById('ExpectedDate').setAttribute('min', currentDate);
+        document.getElementById('ExpectedDate').setAttribute('max', maxDate);
+
+        document.getElementById('LastBorrowedDate').setAttribute('min', currentDate);
+        document.getElementById('LastBorrowedDate').setAttribute('max', maxDate);
+
+        document.getElementById('LastUpdated').setAttribute('min', currentDate);
+        document.getElementById('LastUpdated').setAttribute('max', maxDate);
+
+        document.getElementById('AdmittedInventory').setAttribute('min', currentDate);
+        document.getElementById('AdmittedInventory').setAttribute('max', maxDate);
+
+
+    </script>
+     <script>
+         // Set the current date as the minimum date and set the maximum date to 2030-12-31
+         var currentDate = new Date().toISOString().split('T')[0];
+         var maxDate = '2024-12-31';
+
+         // Set the minimum and maximum attributes for issueDate
+         document.getElementById('issueDate').setAttribute('min', currentDate);
+         document.getElementById('issueDate').setAttribute('max', maxDate);
+
+         // Set the minimum and maximum attributes for returnDate
+         document.getElementById('returnDate').setAttribute('min', currentDate);
+         document.getElementById('returnDate').setAttribute('max', maxDate);
+     </script>
+     
+          <script>
+              function validateEmail() {
+                  var emailInput = document.getElementsByName("Email")[0];
+                  var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+                  var validationMsg = document.getElementById("emailValidationMsg");
+
+                  if (!emailPattern.test(emailInput.value)) {
+                      validationMsg.style.display = "block";
+                  } else {
+                      validationMsg.style.display = "none";
+                  }
+              }
+              function validEmail() {
+                  var emailInput = document.getElementsByName("Email")[0];
+                  var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+                  var validationMsg = document.getElementById("emailValidMsg");
+
+                  if (!emailPattern.test(emailInput.value)) {
+                      validationMsg.style.display = "block";
+                  } else {
+                      validationMsg.style.display = "none";
+                  }
+              }
+             
+          </script>
+ 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"type="text/javascript"></script>
+
+ 
+ <script src="../Themes/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+ <!-- END CORE PLUGINS -->
+ <!-- BEGIN PAGE LEVEL PLUGINS -->
+ <script src="../Themes/assets/global/plugins/bootstrap-table/bootstrap-table.min.js" type="text/javascript"></script>
+    <script src="../Themes/assets/pages/scripts/table-bootstrap.min.js" type="text/javascript"></script>
+ <!-- END PAGE LEVEL PLUGINS -->
+ <!-- BEGIN THEME GLOBAL SCRIPTS -->
+ <script src="../Themes/assets/global/scripts/app.min.js" type="text/javascript"></script>
+ <!-- END THEME GLOBAL SCRIPTS -->
+ 
+ 
+
+ <!-- BEGIN THEME LAYOUT SCRIPTS -->
+ <script src="../Themes/assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+ <script src="../Themes/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+</body>
+</html>
