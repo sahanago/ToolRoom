@@ -5,7 +5,7 @@
      <h1 class="page-title"style="padding-top:0px;">Dashboard 
      <small>statistics, charts, recent events and reports</small>
  </h1>
-                          <div class="page-bar">
+     <div class="page-bar">
       <ul class="page-breadcrumb">
           <li>
               <a href="index.html">Home</a>

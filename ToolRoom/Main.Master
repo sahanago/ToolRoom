@@ -141,19 +141,18 @@
                                 </ul>
                             </li>
                             <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="Userlist.aspx" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>
                                     <span class="title">Manage user</span>
                                     <span class="arrow"></span>
+                                </a>                             
+                            </li>
+                            <li class="nav-item ">
+                                <a href="Vehiclelist.aspx" class="nav-link nav-toggle">
+                                    <i class="fa fa-truck"></i>
+                                    <span class="title">Manage vehicles</span>
+                                    <span class="arrow"></span>
                                 </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item  ">
-                                        <a href="user.aspx" class="nav-link ">
-                                            <span class="title">List of users</span>
-                                        </a>
-
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
