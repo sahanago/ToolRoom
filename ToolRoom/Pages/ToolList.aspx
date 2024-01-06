@@ -1,4 +1,5 @@
-﻿v@ Page Language="C#" AutoEventWireup="true" CodeBehind="ToolList.aspx.cs" Inherits="ToolRoom.Pages.ToolList" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ToolList.aspx.cs" Inherits="ToolRoom.Pages.ToolList" %>
 
 <!DOCTYPE html>
 
@@ -45,6 +46,11 @@
     .text-red {
         color: red;
     }
+    .control-label {
+    margin-top: 5px;
+    font-weight: 500;
+}
+
 </style>
    
 
@@ -174,7 +180,7 @@
              </a>
          </li>
          <li class="nav-item  ">
-             <a href="components_color_pickers.html" class="nav-link ">
+             <a href="ReturnTool.aspx" class="nav-link ">
                  <span class="title">Return tool</span>
                  <span class="badge badge-danger"></span>
              </a>
@@ -279,6 +285,12 @@
         </ul>
     </div>
 </div>
+
+                      
+
+
+
+
                         <div class="mt-bootstrap-tables">                     
                                
                             <div class="row">                         
@@ -286,9 +298,28 @@
                                     <div class="portlet light bordered"> 
                                          
                                         <div class="portlet-body">
-                                           
-                                                 <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data16.json" data-height="500" data-show-columns="true" data-id-field="id" data-search="true" ">
-                                                   
+                                            <div class="form-group" >
+        <label class="control-label col-md-1 ">
+              <strong>Filter by :</strong>
+        </label>
+        <div class="col-md-2">
+            <select class="form-control select2me" name="filterBy">
+                <option value="category">Category</option>
+                 <optgroup label="Issued on">
+                <option value="issuedOnAfter">After</option>
+                <option value="issuedOnBefore">Before</option>
+                <option value="issuedOnBetween">Between</option>
+            </optgroup>
+                <option value="nextTestingDueOn">Next testing due on</option>
+                <option value="returnDueOn">Return due on</option>
+                <option value="issuedBy">Issued to</option>
+            </select>
+        </div>
+    </div>
+
+                                                 <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data20.json" data-height="600" data-show-columns="true" data-id-field="id" data-search="true" ">
+                                                  
+
                                                 <thead>
                                                     <tr>
                                                        <th data-field="ToolBarcodeNumber" data-sortable="true" data-formatter="barcodeFormatter" data-events="barcodeEvents">Barcode #</th>
@@ -298,13 +329,13 @@
                                                         <th data-field="Description"  data-sortable="false"> Description </th>
                                                          <th data-field="Category" data-sortable="false" data-sorter="priceSorter">Category </th>
                                                           <th data-field="ActiveStatus" data-sortable="true" data-cell-style="statusCell"> Active status </th>
-                                                         <th data-field="LastBorrowedBy" data-sortable="true">  Last borrowed by </th>
-                                                         <th data-field="LastBorrowedDate" data-sortable="true">  Last borrowed date </th>
+                                                         <th data-field="LastBorrowedBy" data-sortable="true"> Last issued to </th>
+                                                         <th data-field="LastBorrowedDate" data-sortable="true">  Last issued date </th>
                                                          <th data-field="ReturnDate" data-sortable="true">  Return date </th>
                                                          <th data-field="Status" data-sortable="true" data-cell-style="statusCellStyle">  Status </th>
-                                                         <th data-field="TestingDate" data-sortable="true">  Testing date </th>
+                                                         <th data-field="TestingDate" data-sortable="true">Next testing date </th>
                                                         <th data-field="Actions" data-formatter="actionFormatterHistory" data-events="actionHistoryEvents">History</th>
-                                                         <th data-field="Actions" data-formatter="actionFormatter" data-events="actionEvents">Actions</th>
+                                                         <th data-field="" data-formatter="actionFormatter" data-events="actionEvents">Actions</th>
                                                     </tr>
                                                 </thead>
 
@@ -426,6 +457,7 @@
                 });
             }
         </script>
+      
 
          <script>
              // Custom formatter for the "ToolBarcodeNumber" column
@@ -443,11 +475,11 @@
             
              function navigateToNextPage(barcodeNumber) {
              
-                 window.location.href = 'Toolinventoryview.aspx?barcode=' + barcodeNumber;
+                 window.location.href = 'Toolview.aspx?barcode=' + barcodeNumber;
              }
              function cancelCurrentPage() {
 
-                 window.location.reload();
+                 window.location.href = 'Dashboard.aspx';
              }
          </script>
          <script>

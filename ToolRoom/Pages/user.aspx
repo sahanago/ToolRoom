@@ -42,212 +42,199 @@
 </head>
 <!-- END HEAD -->
 
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-md" style="font-size:50px;">
-    <div class="page-wrapper">
-        <div class="page-header navbar navbar-fixed-top">
-            <div class="page-header-inner ">
-                <div class="page-logo">
-                    <a href="index.html">
-                        <div class="menu-toggler sidebar-toggler">
-                            <span></span>
-                        </div>
-                </div>
-                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span></span>
-                </a>
-                <div class="top-menu">
-                    <ul class="nav navbar-nav pull-right">
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <span class="username username-hide-on-mobile">Nick </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-default">
-                                <li>
-                                    <a href="page_user_profile_1.html">
-                                        <i class="icon-user"></i>My Profile </a>
-                                </li>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-md" >
+        <div class="page-wrapper">
+          <div class="page-header navbar navbar-fixed-top">
+             
+                  <div class="top-menu">
+                      <ul class="nav navbar-nav pull-right">
+                              <li class="dropdown dropdown-user">
+                              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                  <span class="username username-hide-on-mobile"> Nick </span>
+                                  <i class="fa fa-angle-down"></i>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-default">
+                                  <li>
+                                      <a href="page_user_profile_1.html">
+                                          <i class="icon-user"></i> My Profile </a>
+                                  </li>
+                                  <li>
+                                      <a href="Login.aspx">
+                                          <i class="icon-key"></i> Log Out </a>
+                                  </li>
+                              </ul>
+                          </li>
 
-                            </ul>
-                        </li>
+                          <li class="dropdown dropdown-quick-sidebar-toggler">
+                              <a href="Login.aspx" class="dropdown-toggle">
+                                  <i class="icon-logout"></i>
+                              </a>
+                          </li>
+                       
+                      </ul>
+                  </div>
+             
+              </div>
+         
+         
+  
+          <div class="page-container">
 
-                        <li class="dropdown dropdown-quick-sidebar-toggler">
-                            <a href="Login.aspx" class="dropdown-toggle">
-                                <i class="icon-logout"></i>
-                            </a>
-                        </li>
+              <div class="page-sidebar-wrapper">
+   
+                  <div class="page-sidebar navbar-collapse collapse">
+                
+                      <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+            
+                          
+                          
+                     <li class="nav-item start active open">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-bar-chart"></i>
+        <span class="title">Dashboard</span>
+        <span class="selected"></span>
+        <span class="arrow open"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item start ">
+            <a href="index.html" class="nav-link ">
+                <i class="icon-bar-chart"></i>
+                <span class="title">Tool Room Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item start active open">
+            <a href="dashboard_2.html" class="nav-link ">
+                <i class="icon-bulb"></i>
+                <span class="title">Maintenance</span>
+                <span class="selected"></span>
+                <span class="badge badge-success"></span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item  ">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-user"></i>
+        <span class="title">Manage user</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item  ">
+            <a href="user.aspx" class="nav-link ">
+                <span class="title">List of users</span>
+            </a>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-</div>
-        <!-- BEGIN SIDEBAR -->
-        <div class="clearfix"></div>
+        </li>
+    </ul>
+</li>
+<li class="nav-item  ">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class=" icon-wrench"></i>
+        <span class="title">Manage inventory</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item  ">
+            <a href="ToolList.aspx" class="nav-link ">
+                <span class="title">List of tools</span>
+            </a>
+        </li>
 
-        <div class="page-container">
-
-            <div class="page-sidebar-wrapper">
-
-                <div class="page-sidebar navbar-collapse collapse">
-
-                    <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
-
-                        <li class="sidebar-toggler-wrapper hide">
-                            <div class="sidebar-toggler">
-                                <span></span>
-                            </div>
-                        </li>
-
-                        <li class="sidebar-search-wrapper">
-
-                            <form class="sidebar-search  " action="page_general_search_3.html" method="post">
-                                <a href="javascript:;" class="remove">
-                                    <i class="icon-close"></i>
-                                </a>
-
-                            </form>
-
-                        </li>
-                        <li class="nav-item">
-                            <a href="Dashboard.aspx" class="nav-link nav-toggle">
-                                <span class="title">Dashboard</span>
-                                <span class="selected"></span>
-                                <span class="arrow open"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start ">
-                                    <a href="index.html" class="nav-link ">
-                                        <i class="icon-bar-chart"></i>
-                                        <span class="title">Tool Room Dashboard</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="dashboard_2.html" class="nav-link ">
-                                        <i class="icon-bulb"></i>
-                                        <span class="title">Maintenance</span>
-                                        <span class="selected"></span>
-                                        <span class="badge badge-success"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+        <li class="nav-item  ">
+            <a href="ListTools.aspx" class="nav-link ">
+                <span class="title">List of vechicles</span>
+            </a>
+        </li>
 
 
+    </ul>
+</li>
+<li class="nav-item  ">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class=" icon-wrench"></i>
+        <span class="title">Manage tools</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item  ">
+            <a href="components_date_time_pickers.html" class="nav-link ">
+                <span class="title">Issue tool</span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="ReturnTool.aspx" class="nav-link ">
+                <span class="title">Return tool</span>
+                <span class="badge badge-danger"></span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="components_select2.html" class="nav-link ">
+                <span class="title">Issue fuel</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item  ">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-docs"></i>
+        <span class="title">Reports</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item  ">
+            <a href="form_controls.html" class="nav-link ">
+                <span class="title">Inventory by category</span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="form_controls_md.html" class="nav-link ">
+                <span class="title">Inventory by grade</span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="form_validation.html" class="nav-link ">
+                <span class="title">Tools due for testing</span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="form_validation_states_md.html" class="nav-link ">
+                <span class="title">Tools due to be returned</span>
+            </a>
+        </li>
 
-
-                        <li class="nav-item start active open">
-                            <a href="User.aspx" class="nav-link-toggle">
-                                <i class="icon-user"></i>
-                                <span class="title">Manage User</span>
-                                <span class="arrow open"></span>
-                            </a>
-                        </li>
-
-                        <li class="heading">
-                            <h3 class="uppercase">Tool Room</h3>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class=" icon-wrench"></i>
-                                <span class="title">Manage Inventory</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="ui_colors.html" class="nav-link ">
-                                        <span class="title">Add Inventory</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item  ">
-                                    <a href="ui_timeline_horizontal.html" class="nav-link ">
-                                        <span class="title">All Inventory View</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class=" icon-wrench"></i>
-                                <span class="title">Manage Tools</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="components_date_time_pickers.html" class="nav-link ">
-                                        <span class="title">Issue Tool</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="components_color_pickers.html" class="nav-link ">
-                                        <span class="title">Return Tool</span>
-                                        <span class="badge badge-danger"></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="components_select2.html" class="nav-link ">
-                                        <span class="title">Issue Fuel</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-docs"></i>
-                                <span class="title">Reports</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="form_controls.html" class="nav-link ">
-                                        <span class="title">Inventory by Category</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_controls_md.html" class="nav-link ">
-                                        <span class="title">Inventory by Grade</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_validation.html" class="nav-link ">
-                                        <span class="title">Tools Due for Testing</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_validation_states_md.html" class="nav-link ">
-                                        <span class="title">Tools Due to be Returned</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-bulb"></i>
-                                <span class="title">Admin Tasks</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="elements_steps.html" class="nav-link ">
-                                        <span class="title">Send Emails for Testing due</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="elements_lists.html" class="nav-link ">
-                                        <span class="title">Send Emails for Return of Tools</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- END SIDEBAR MENU -->
-                    <!-- END SIDEBAR MENU -->
-                </div>
-                <!-- END SIDEBAR -->
-            </div>
+    </ul>
+</li>
+<li class="nav-item  ">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-docs"></i>
+        <span class="title">Admin tasks</span>
+        <span class="arrow"></span>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item  ">
+            <a href="elements_steps.html" class="nav-link ">
+                <span class="title">Send emails for testing due</span>
+            </a>
+        </li>
+        <li class="nav-item  ">
+            <a href="elements_lists.html" class="nav-link ">
+                <span class="title">Send emails for return of tools</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item">
+    <a href="help.aspx" class="nav-link">
+        <i class="icon-question"></i>
+        <span class="title">Help</span>
+    </a>
+</li>
+                      </ul>
+                      <!-- END SIDEBAR MENU -->
+                      <!-- END SIDEBAR MENU -->
+                  </div>
+                  <!-- END SIDEBAR -->
+              </div>
             <!-- END SIDEBAR -->
             </
             <!-- BEGIN CONTENT -->
@@ -258,77 +245,114 @@
 
                     <!-- BEGIN TICKET LIST CONTENT -->
                    
-                        <div class="row">
-                            <div class="col-md-12">
-                                
-                                    <div class="portlet-title tabbable-line">
-                                       
-                                            <div class="btn-group pull-right">
-                                                <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown" style="text-transform: capitalize; font-size: medium; text-align: right;">
-                                                    Tools
-                                                  <i class="fa fa-angle-down"></i>
-                                                </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <i class="fa fa-print"></i>Print </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <i class="fa fa-file-pdf-o"></i>Save as PDF </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <i class="fa fa-file-excel-o"></i>Export to Excel </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                 
+                      <h1 class="page-title">User profile :
+        <small>All detail are shown below</small>
+    </h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered">
+
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+                    <form action="#" id="form_sample_3" class="form-horizontal">
+                        <div class="form-body">
+                            <div class="alert alert-danger display-hide">
+                                <button class="close" data-close="alert"></button>
+                                You have some form errors. Please check below.
+                            </div>
+                            <div class="alert alert-success display-hide">
+                                <button class="close" data-close="alert"></button>
+                                Your form validation is successful!
                             </div>
 
+                            <div class="form-group">
+                                <label class="control-label col-md-3" style="text-align:right;">
+                                    Username
+                                <span class="required">* </span>
+                                </label>
+                                <div class="col-md-5">
+                                    <input type="text" name="username" data-required="1" maxlength="20" class="form-control" value="Jane123" />
 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3" style="text-align:right;">
+                                    Full name
+                              <span class="required">* </span>
+                                </label>
+                                <div class="col-md-5">
+                                    <input type="text" name="fullname" data-required="1" maxlength="20" class="form-control" value="Jane Smith" />
+                                </div>
+                            </div>
 
-                            <div class="row">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" style="text-align:right;">
+                                    Email
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-5">
+                                    <input type="text" name="Email" data-required="1" class="form-control" maxlength="30" placeholder="example@gmail.com" onblur="validateEmail()" value="Janesmith123@gmail.com" />
+                                    <span id="emailValidationMsg" style="color: red; display: none;">Please enter a valid email address (e.g: example@gmail.com)</span>
+                                </div>
+                            </div>
 
-                                <div class="col-md-12">
-                                    <div class="portlet light bordered">
-                                        <div class="portlet-title">
-                                            <div class="caption" >
-                                                <i class="icon-social-dribbble font-green hide" style="text-transform: capitalize; "></i>
-                                                <span class="caption-subject font-dark bold">List users</span>
-                                            </div>
-                                        </div>
-                                        <div class="portlet-body">
-                                            <table id="table-pagination"  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data5.json" data-height="599" data-pagination="true" data-search="true">
-                                                <thead>
-                                                    <tr>
-                                                        <th data-field="state" data-checkbox="true"></th>
-                                                        <th data-field="ToolBarcodeNumber" data-align="center" data-sortable="true" data-   formatter="idFormatter">Id</th>
-                                                        <th   data-field="Information" data-align=" center" data-sortable="true">Name</th>
-                                                        <th   data-field="name" data-align=" center" data-sortable="true">Email id</th>
-                                                        <th   data-field="name" data-align=" center" data-sortable="true">Date of joining</th>
-                                                        <th   data-field="ModelNumber" data-align=" center" data-sortable="true">Roles</th>
-                                                        <th   data-field="name" data-align=" center" data-sortable="true">Status</th>
-                                                        <th   data-field="name"  data-sortable="true">Comments</th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                            </table>
-                                        </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3" style="text-align:right;">
+                                    Roles
+                                <span class="required">* </span>
+                                </label>
+                                <div class="col-md-5">
+                                    <div class="mt-checkbox-list" data-error-container="#form_2_services_error">
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" value="1" name="service" id="checkbox1" />
+                                            View only
+                                        <span></span>
+                                        </label>
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" value="2" id="checkbox2" name="service" />
+                                            Inventory management
+                                        <span></span>
+                                        </label>
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" value="3" id="checkbox3" name="service" />
+                                            Issue
+                                        <span></span>
+                                        </label>
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" value="4" id="checkbox4" name="service" />
+                                            Return
+                                        <span></span>
+                                        </label>
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" value="5" id="checkbox5" name="service" />
+                                            Reports
+                                       <span></span>
+                                        </label>
+
                                     </div>
-                                </div>
 
-
-                                <div class="form-actions">
-                               
-                                <div class="col-sm-6" style="text-align: left">
-                                    <button type="submit" class="btn btn-lg green" style="text-transform: capitalize">Back</button>
                                 </div>
                             </div>
-                        
-                    </div>
+
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
                 </div>
+                <!-- END VALIDATION STATES-->
+
+            </div>
+        </div>
+    </div>
+
+     <div style="display: flex; align-items: flex-end; justify-content: center;">
+     <div style="width: 500px; text-align: center; display: flex; justify-content: space-between;">
+         <a href="Homepage.aspx" type="button" style="width: 100%; padding: 10px; margin-right: 10px; text-transform: capitalize;" class="btn btn-lg default" onclick="cancelCurrentPage()">Cancel</a>
+         <button type="button" style="width: 100%; padding: 10px; text-transform: capitalize;" class="btn btn-lg green" onclick="redirectSubmit()">Submit</button>
+     </div>
+ </div>
             </div>
             <!-- END PROFILE CONTENT -->
         </div>
@@ -346,21 +370,24 @@
 
 
    <script>
-       function idFormatter(value, row, index) {
-           // Generate a hyperlink with the ID value as the text
-           return '<a href="#" onclick="navigateToPage(' + row.id + ')" style="text-decoration: underline;">' + value + '</a>';
-       }
 
-       function idFormatter2(value, row, index) {
-           // Generate a hyperlink with the ID value as the text
-           return '<span  style="font-size:20px">' + value + '</span>';
+       const checkbox1 = document.getElementById('checkbox1');
+       const checkbox2 = document.getElementById('checkbox2');
+       const checkbox3 = document.getElementById('checkbox3');
+       const checkbox4 = document.getElementById('checkbox4');
+       const checkbox5 = document.getElementById('checkbox5');
 
-       }
 
-       function navigateToPage(id) {
-           // Redirect to the desired page, you can update the URL accordingly
-           window.location.href = '/YourPage?id=' + id;
-       }
+       checkbox1.addEventListener('click', function () {
+           checkbox2.disabled = checkbox1.checked;
+           checkbox3.disabled = checkbox1.checked;
+           checkbox4.disabled = checkbox1.checked;
+           checkbox5.disabled = checkbox1.checked;
+       });
+
+       checkbox2.addEventListener('click', function () {
+           checkbox1.disabled = checkbox2.checked;
+       });
    </script>
 
     

@@ -40,9 +40,7 @@ custom-link {
     padding-right: 15px; /* for export button */
    
 }
- .custom-input {
-        background-color: #f2f2f2; /* Set your desired gray color */
-    }
+ 
  
 </style>
    
@@ -175,7 +173,7 @@ custom-link {
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="components_color_pickers.html" class="nav-link ">
+                <a href="ReturnTool.aspx" class="nav-link ">
                     <span class="title">Return tool</span>
                     <span class="badge badge-danger"></span>
                 </a>
@@ -257,7 +255,7 @@ custom-link {
         
                   <h1 class="page-title">Tool history :
     <small>
-The tools borrowed in the past are displayed below.</small>
+All transactions for this tool are displayed below.</small>
 </h1>
                      
                        
@@ -279,14 +277,16 @@ The tools borrowed in the past are displayed below.</small>
                                             <div class="tab-pane active" id="tab_4_1">
                                                                                                                                                                 <form action="#" id="form_sample_3" class="form-horizontal">
                                      <div class="form-group">
-                    <label class="control-label col-md-1">Barcode #</label>
+                    <label class="control-label col-md-1"  id="barcodeLabel"> Barcode #</label>
                     <div class="col-md-5">
-                        <input type="number" name="barcode" data-required="1" class="form-control custom-input" autocomplete="off" value="567123908" />
+                       <a href="#" class="label-link" id="barcodeLink">
+                <input type="number" name="barcode" data-required="1" class="form-control " autocomplete="off" value="567123908" readonly="" />
+            </a>
                     </div>
 
                     <label class="control-label col-md-1">Model #</label>
                     <div class="col-md-5">
-                        <input type="text" name="model" data-required="1" class="form-control custom-input" maxlength="50" value="DM-2023" />
+                        <input type="text" name="model" data-required="1" class="form-control " maxlength="50" value="DM-2023"readonly="" />
                     </div>
                 </div>
 
@@ -294,19 +294,19 @@ The tools borrowed in the past are displayed below.</small>
                                              <div class="form-group">
     <label class="control-label col-md-1">Name</label>
     <div class="col-md-5">
-        <input type="text" name="name" data-required="1" class="form-control custom-input" value="Drill machine" />
+        <input type="text" name="name" data-required="1" class="form-control " value="Drill machine" readonly=""/>
     </div>
 
     <label class="control-label col-md-1">Category</label>
     <div class="col-md-5">
-        <input type="text" name="Category" data-required="1" class="form-control custom-input" value="Hand tool" />
+        <input type="text" name="Category" data-required="1" class="form-control " value="Hand tool"readonly="" />
     </div>
 </div>
 
                                            <div class="form-group">
                                             <label class="control-label col-md-1">Description</label>
                                                   <div class="col-md-11">
-                                              <input type="text" name="name" data-required="1" class="form-control custom-input" autocomplete="off" maxlength="50"value="High-speed cordless drill for various applications"/>
+                                              <input type="text" name="name" data-required="1" class="form-control " autocomplete="off" maxlength="50"value="High-speed cordless drill for various applications" readonly=""/>
                                              </div>
                                               </div>
 
@@ -345,22 +345,22 @@ The tools borrowed in the past are displayed below.</small>
                             <div class="row">                         
                                 <div class="col-md-12">
                                     <div class="portlet light bordered">
-                                        <div class="table-heading">
-                                            <h4>
-                                                The tools borrowed details are displayed below.
-                                            </h4>
-                                        </div>
+                                        
                                         <div class="portlet-body">
-                                            <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data17.json" data-height="500" data-show-columns="true" data-id-field="id" data-search="true" "> 
+
+
+                                            <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data21.json" data-height="500" data-show-columns="true" data-id-field="id" data-search="true" "> 
                                                 <thead> 
                                                    
                                                     <tr>
-                                                    
-                                                        <th data-field="BorrowerName" data-sortable="true">Name </th>
-                                                        <th data-field="ContactDetails"  data-sortable="false"> Contact</th>
-                                                        <th data-field="BorrowedDate" data-sortable="true" data-                                       sorter="priceSorter">Borrowed date </th>
-                                                        <th data-field="ReturnedDate"  data-sortable="true"> Returned date </                             th>
-                                                         <th data-field="ReturnStatus" data-sortable="false" >Status </th>
+
+
+                                                        <th data-field="BorrowerName" data-sortable="true" data-formatter="IssuedFormatter" data-events="IssuedEvents">Name </th>
+                                                        <th data-field="ContactDetails" data-sortable="false">Contact</th>
+                                                        <th data-field="BorrowedDate" data-sortable="true" data-sorter="priceSorter">Issued date</th>
+                                                        <th data-field="ReturnedDate" data-sortable="true">Returned date </th>
+                                                        <th data-field="ReturnStatus" data-sortable="false">Status </th>
+                                                        <th data-field="Actions" data-formatter="actionFormatterHistory" data-events="actionHistoryEvents">Details</th>
                                                          
                                                     </tr>
                                                 </thead>
@@ -399,16 +399,82 @@ The tools borrowed in the past are displayed below.</small>
 </div>
 <!-- END FOOTER -->
 </div>
+         <<script>
+              document.getElementById('barcodeLink').addEventListener('click', function () {
+                  navigateToToolDetails();
+              });
 
-       
-        
+              function navigateToToolDetails() {
+                  var barcodeValue = document.querySelector('#barcodeLink input').value;
+                  var url = 'Toolview.aspx?barcode=' + barcodeValue;
+                  window.location.href = url;
+              }
+         </script>
+
+        <script>
+            // Custom formatter for the "History" column
+            function actionFormatterHistory(value, row, index) {
+                return '<button class="btn blue btn-block btn-history" data-index="' + index + '" style="text-transform: capitalize;padding: 2px;">View</button>';
+            }
+
+            // Event handler for the "History" button
+            var actionHistoryEvents = {
+                'click .btn-history': function (e, value, row) {
+                    var index = $(this).data('index');
+                    openHistoryPage(index);
+                }
+            };
+
+            // Function to open the history.aspx page
+            function openHistoryPage(index) {
+                // Implement your logic to construct the URL or handle navigation
+                // For example, you can use window.location.href to redirect to the history.aspx page
+                window.location.href = 'IssueTool.aspx?index=' + index;
+            }
+
+            var actionEvents = {
+                'click .btn-green': function (e, value, row, index) {
+                    deleteRow(index);
+                }
+            };
+
+            // Function to delete a row
+            function deleteRow(index) {
+                // Implement your logic to delete the row at the specified index
+                // For example, you can use the Bootstrap Table API to remove the row
+                $('#table-pagination').bootstrapTable('remove', {
+                    field: 'index',
+                    values: [index]
+                });
+            }
+        </script>
+        <script>
+            function IssuedFormatter(value, row, index) {
+                return '<a class="custom-link" data-index="' + index + '">' + value + '</a>';
+            }
+
+            var IssuedEvents = {
+                'click .custom-link': function (e, value, row) {
+                    var index = $(this).data('index');
+                    var borrowerName = row.BorrowerName; // Assuming BorrowerName is the correct property in your row data
+                    navigateToUserPage(borrowerName);
+                }
+            };
+
+            function navigateToUserPage(borrowerName) {
+                var encodedBorrowerName = encodeURIComponent(borrowerName);
+                window.location.href = 'user.aspx?name=' + encodedBorrowerName;
+            }
+        </script>
+
 
          <script>
-            
+         
+    
              
              function cancelCurrentPage() {
 
-                 window.location.reload();
+                 window.location.href = 'Dashboard.aspx';
              }
          </script>
          

@@ -11,8 +11,8 @@
     "ToolId": 112,
     "BorrowerName": "John Doe",
     "ContactDetails": "9009089809",
-    "BorrowedDate": "09-08-2023",
-    "ReturnedDate": "13-08-2023",
+    "BorrowedDate": "12-12-2023",
+    "ReturnedDate": "15-12-2023",
     "ReturnStatus": "Returned"
   },
 
@@ -21,8 +21,8 @@
     "ToolId": 112,
     "BorrowerName": "Alice Williams",
     "ContactDetails": "7654321098",
-    "BorrowedDate": "10-09-2023",
-    "ReturnedDate": "15-09-2023",
+    "BorrowedDate": "10-12-2023 ",
+    "ReturnedDate": "11-12-2023",
     "ReturnStatus": "Returned"
   },
 
@@ -37,61 +37,61 @@
   {
     "ToolId": 112,
     "BorrowerName": "Grace Miller",
-    "ContactDetails": "3210987654",
-    "BorrowedDate": "20-11-2023",
-    "ReturnedDate": "23-11-2023",
+    "ContactDetails": "9210987654",
+    "BorrowedDate": "05-12-2023",
+    "ReturnedDate": "09-12-2023",
     "ReturnStatus": "Returned"
   },
   {
     "ToolId": 112,
     "BorrowerName": "Harry Jones",
-    "ContactDetails": "2109876543",
-    "BorrowedDate": "13-11-2023",
-    "ReturnedDate": "19-11-2023",
+    "ContactDetails": "9109876543",
+    "BorrowedDate": "25-11-2023",
+    "ReturnedDate": "28-11-2023",
     "ReturnStatus": "Returned"
   },
 
   {
     "ToolId": 112,
     "BorrowerName": "Ivy White",
-    "ContactDetails": "1098765432",
-    "BorrowedDate": "31-10-2023",
-    "ReturnedDate": "01-11-2023",
+    "ContactDetails": "9098765432",
+    "BorrowedDate": "21-11-2023",
+    "ReturnedDate": "24-11-2023",
     "ReturnStatus": "Returned"
   },
   {
     "BorrowerName": "Bob Johnson",
-    "ContactDetails": "8765432109",
-    "BorrowedDate": "10-12-2023",
-    "ReturnedDate": "12-12-2023",
+    "ContactDetails": "9765432109",
+    "BorrowedDate": "13-11-2023",
+    "ReturnedDate": "19-11-2023",
     "ReturnStatus": "Returned"
   },
   {
     "BorrowerName": "Samuel Brown",
     "ContactDetails": "7654321098",
-    "BorrowedDate": "03-12-2023",
-    "ReturnedDate": "05-12-2023",
+    "BorrowedDate": "31-10-2023",
+    "ReturnedDate": "11-11-2023",
     "ReturnStatus": "Returned"
   },
   {
     "BorrowerName": "Olivia Turner",
-    "ContactDetails": "6543210987",
-    "BorrowedDate": "01-12-2023",
-    "ReturnedDate": "02-12-2023",
+    "ContactDetails": "9543210987",
+    "BorrowedDate": "10-09-2023",
+    "ReturnedDate": "15-09-2023",
     "ReturnStatus": "Returned"
   },
   {
     "BorrowerName": "William Lee",
-    "ContactDetails": "5432109876",
-    "BorrowedDate": "11-11-2023",
-    "ReturnedDate": "12-11-2023",
+    "ContactDetails": "9432109876",
+    "BorrowedDate": "09-08-2023",
+    "ReturnedDate": "13-08-2023",
     "ReturnStatus": "Returned"
   },
   {
     "BorrowerName": "Sophia Clark",
-    "ContactDetails": "4321098765",
-    "BorrowedDate": "05-11-2023",
-    "ReturnedDate": "10-11-2023",
+    "ContactDetails": "9321098765",
+    "BorrowedDate": "02-08-2023",
+    "ReturnedDate": "07-08-2023",
     "ReturnStatus": "Returned"
   }
 

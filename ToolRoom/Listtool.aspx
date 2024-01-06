@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Listtool.aspx.cs" Inherits="ToolRoom.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>    
+    .control-label {
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+</style>
      <script>
          // Custom formatter for the "ToolBarcodeNumber" column
          function barcodeFormatter(value, row, index) {
@@ -46,7 +53,7 @@
 <script>
     // Custom formatter for the "History" column
     function actionFormatterHistory(value, row, index) {
-        return '<button class="btn blue btn-block btn-history" data-index="' + index + '" style="text-transform: capitalize;padding: 2px;">View</button>';
+        return '<a class="btn blue btn-block btn-history" data-index="' + index + '" style="text-transform: capitalize;padding: 2px;">View</a>';
     }
 
     // Event handler for the "History" button
@@ -115,8 +122,25 @@
                                     <div class="portlet light bordered"> 
                                          
                                         <div class="portlet-body">
-                                           
-                                                 <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data16.json" data-height="600" data-show-columns="true" data-id-field="id" data-search="true" ">
+                                                                                   <div class="form-group" >
+    <label class="control-label col-md-1 ">
+          <strong>Filter by :</strong>
+    </label>
+    <div class="col-md-2">
+        <select class="form-control select2me" name="filterBy">
+            <option value="category">Category</option>
+             <optgroup label="Issued on">
+            <option value="issuedOnAfter">After</option>
+            <option value="issuedOnBefore">Before</option>
+            <option value="issuedOnBetween">Between</option>
+        </optgroup>
+            <option value="nextTestingDueOn">Next testing due on</option>
+            <option value="returnDueOn">Return due on</option>
+            <option value="issuedBy">Issued to</option>
+        </select>
+    </div>
+</div>
+                                                 <table  data-toggle="table" data-url="../Themes/assets/global/plugins/bootstrap-table/data/data20.json" data-height="650" data-show-columns="true" data-id-field="id" data-search="true" ">
                                                    
                                                 <thead>
                                                     <tr>
@@ -133,7 +157,7 @@
                                                          <th data-field="Status" data-sortable="true" data-cell-style="statusCellStyle">  Status </th>
                                                          <th data-field="TestingDate" data-sortable="true">  Testing date </th>
                                                         <th data-field="Actions" data-formatter="actionFormatterHistory" data-events="actionHistoryEvents">History</th>
-                                                         <th data-field="Actions" data-formatter="actionFormatter" data-events="actionEvents">Actions</th>
+                                                         <th data-field="" data-formatter="actionFormatter" data-events="actionEvents">Actions</th>
                                                     </tr>
                                                 </thead>
 

@@ -1,4 +1,4 @@
-﻿][<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Toolinventoryview.aspx.cs" Inherits="ToolRoom.Pages.Toolinventoryview" %>
+﻿][<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Toolview.aspx.cs" Inherits="ToolRoom.Pages.Toolinventoryview" %>
 
 <!DOCTYPE html>
 
@@ -32,6 +32,21 @@
             padding-right: 15px;
            
         }
+         .form-group {
+            margin-bottom: 15px;
+        }
+
+        .size-dropdown {
+            display: flex;
+            align-items: center;
+        }
+
+        .size-dropdown select {
+            margin-left: 5px;
+        }
+       .custom-input {
+          background-color: #f2f2f2; /* Set your desired gray color */
+       }
      </style>
     
 
@@ -160,7 +175,7 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="components_color_pickers.html" class="nav-link ">
+                <a href="ReturnTool.aspx" class="nav-link ">
                     <span class="title">Return tool</span>
                     <span class="badge badge-danger"></span>
                 </a>
@@ -288,7 +303,12 @@
                                 </div>
                             </div>
                         </div>
-                       <div                 
+                             
+                           <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="button" class="btn btn-primary " onclick="viewHistory()" style="text-transform: capitalize;">View history</button>
+        </div>
+    </div>
                             <div class="row">
                             <div class="col-md-12">
                                 
@@ -403,9 +423,9 @@ maxlength="12" value="567123908" />
                                                                                                                                                                 <form action="#" id="form_sample_3" class="form-horizontal">
                                      
                                                                                                               <div class="form-group">
-                                <label class="control-label col-md-3 " >Unit price
-                                     <span class="required"> * </span>
-                                         </label>
+                                 <label class="control-label col-md-3">Unit price (Rs)
+            <span class="required"> * </span>
+        </label>
                                     <div class="col-md-5">
                                <input type="number" name="name" data-required="1" class="form-control"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
 maxlength="8"  value="50"/> </div>
@@ -414,19 +434,23 @@ maxlength="8"  value="50"/> </div>
 
                                   
 
+                                         <div class="form-group">
+        <label class="control-label col-md-3">Size
+            <span class="required"> * </span>
+        </label>
+        <div class="col-md-5 size-dropdown">
+            <input type="text" name="size" data-required="1" class="form-control" maxlength="10" value="10x20x5" />
+            <select name="sizeUnit">
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+            </select>
+        </div>
+    </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3">
-                                                Size
-                                                  <span class="required">* </span>
-                                            </label>
-                                            <div class="col-md-5">
-                                                <input type="text" name="Size" data-required="1" class="form-control"  maxlength="10"value="10x20x5"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">
-                                                Approx.weight (Kgs)
+                                                Approx. weight (Kgs)
                                             </label>
                                             <div class="col-md-5">
                                                 <input type="number" name="Weight" data-required="1" class="form-control" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -436,7 +460,7 @@ maxlength="8" value="2.5"/>
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3">
-                                                Operating temperature
+                                                Operating temperature (°C)
                                             </label>
                                             <div class="col-md-5">
                                                 <input type="text" name="Temperature" data-required="1" class="form-control" maxlength="20"value="25°C - 80°C" />
@@ -453,12 +477,7 @@ maxlength="8" value="2.5"/>
                                         </div>
 
 
-                                                                                                                                                                    <div class="form-group">
-                                                                                                                                                                        <label class="control-label col-md-3">Admitted into inventory on</label>
-                                                                                                                                                                        <div class="col-md-5">
-                                                                                                                                                                            <input type="Date" class="form-control"  name="AdmittedInventory"  id="AdmittedInventory" value="2023-05-10" />
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </div>
+                                                                                                                                                                   
 
                                                                                                                                                                     <div class="form-group">
 
@@ -504,20 +523,34 @@ maxlength="8" value="2.5"/>
                                                                                                                                                                         </div>
                                                                                                                                                                     </div>
 
-                                                                                                                                                                    <div class="form-group">
-                                                                                                                                                                        <label class="control-label col-md-3">
-                                                                                                                                                                            Material grade
-        <span class="required">* </span>
-                                                                                                                                                                        </label>
-                                                                                                                                                                        <div class="col-md-5">
-                                                                                                                                                                            <select class="form-control select2me" name="options2">
-                                                                                                                                                                                <option>Grade A</option>
-                                                                                                                                                                                <option>Grade B</option>
-                                                                                                                                                                                <option>Grade C</option>
-                                                                                                                                                                                <option>Others</option>
-                                                                                                                                                                            </select>
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                <div class="form-group">
+                                                                                                                                                                <label class="control-label col-md-3">
+                                                                                                                                                                    Material grade
+<span class="required">* </span>
+                                                                                                                                                                </label>
+                                                                                                                                                                <div class="col-md-5">
+                                                                                                                                                                    <select class="form-control select2me" name="options2">
+                                                                                                                                                                        <option>Grade A</option>
+                                                                                                                                                                        <option>Grade B</option>
+                                                                                                                                                                        <option>Grade C</option>
+                                                                                                                                                                        <option>Others</option>
+                                                                                                                                                                    </select>
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+
+                                <div class="form-group">
+     <label class="control-label col-md-3">Admitted into inventory on</label>
+     <div class="col-md-5">
+         <input type="Date" class="form-control"  name="AdmittedInventory"  id="AdmittedInventory" value="2023-05-10" />
+     </div>
+ </div>
+         <div class="form-group">
+    <label class="control-label col-md-3">Last updated on</label>
+    <div class="col-md-5">
+        <input type="date" class="form-control custom-input" name="LastUpdated" id="LastUpdated" value="2023-03-10" disabled />
+    </div>
+</div>                                                                                                                                                 
                                                                                                                      </form>
                                             </div>
                                             
@@ -548,11 +581,33 @@ maxlength="8" value="2.5"/>
                                      
                                         <div class="form-group">
         <label class="control-label col-md-3">
-            Location
-        <span class="required">* </span>
+            Warehouse
+            <span class="required">* </span>
         </label>
         <div class="col-md-5">
-            <input type="text" name="name" data-required="1" class="form-control" maxlength="40"value="Warehouse A"/>
+            <input type="text" name="warehouseLocation" data-required="1" class="form-control" maxlength="40" value="Warehouse A"/>
+        </div>
+    </div>
+
+    <!-- Location - Shelf -->
+    <div class="form-group">
+        <label class="control-label col-md-3">
+            Shelf
+            <span class="required">* </span>
+        </label>
+        <div class="col-md-5">
+            <input type="text" name="shelfLocation" data-required="1" class="form-control" maxlength="40" value="Shelf B"/>
+        </div>
+    </div>
+
+    <!-- Location - Location -->
+    <div class="form-group">
+        <label class="control-label col-md-3">
+            Location
+            <span class="required">* </span>
+        </label>
+        <div class="col-md-5">
+            <input type="text" name="itemLocation" data-required="1" class="form-control" maxlength="40" value="Location C"/>
         </div>
     </div>
 
@@ -589,13 +644,23 @@ maxlength="10" value="24"/>
             </select>
         </div>
     </div>
+ <div class="form-group">
+     <label class="control-label col-md-3">
+         Condition
+         <span class="required">* </span>
+     </label>
+     
+     <div class="col-md-5">
+         <select class="form-control select2me" name="options2">
+             <option>New</option>
+             <option>Used</option>
+             <option>Refurbished</option>
+             <option>Other</option>
+         </select>
 
-    <div class="form-group">
-        <label class="control-label col-md-3">Last updated</label>
-        <div class="col-md-5">
-            <input type="Date" class="form-control"  name="LastUpdated"  id="LastUpdated" value="2023-03-10"/>
-        </div>
-    </div>
+     </div>
+ </div>
+   
 
 
                                             </form>
@@ -620,48 +685,63 @@ maxlength="10" value="24"/>
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="tab_7_1">
                                                                                                                                                                 <form action="#" id="form_sample_3" class="form-horizontal">
-                                     
-                                       <div class="form-group">
-        <label class="control-label col-md-3">
-            Default return period
-        </label>
-        <div class="col-md-5">
-            <select class="form-control select2me" name="options2">
-                <option>In 1 week</option>
-                <option>In 2 week</option>
-                <option>In a month</option>
-                <option>Other</option>
-            </select>
-
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label col-md-3">
-            Condition
-            <span class="required">* </span>
-        </label>
-        
-        <div class="col-md-5">
-            <select class="form-control select2me" name="options2">
-                <option>New</option>
-                <option>Used</option>
-                <option>Refurbished</option>
-                <option>Other</option>
-            </select>
-
-        </div>
-    </div>
-    <div class="form-group">
+                                 
+                                <div class="form-group">
     <label class="control-label col-md-3">
         Safety instructions
     </label>
     <div class="col-md-5">
         <textarea name="safetyInstructions" class="form-control" maxLength="40">Wear protective gear when handling.</textarea>
     </div>
-</div>
+</div>                                                                                                                                        
+                                       
+
+   
+  
                                                                                                                                                                                                               
-                                                                                <div class="form-group">
+                                              
+                                                                                                                                                                                                       <div class="form-group">
+    <label class="control-label col-md-3">
+        Default return period
+    </label>
+    <div class="col-md-5">
+        <select class="form-control select2me" name="options2">
+            <option>In 1 week</option>
+            <option>In 2 week</option>
+            <option>In a month</option>
+            <option>Other</option>
+        </select>
+
+    </div>
+</div>
+                                                                                                                                                                    <div class="form-group">
+    <label class="control-label col-md-3">Last issued date<span class="required">* </span></label>
+    <div class="col-md-5">
+        <input type="date" class="form-control" name="LastBorrowedDate"  id="LastBorrowedDate" value="2023-12-17" >
+    </div>
+</div>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                     <div class="form-group">
+                                                    <label class="col-md-3 control-label">Status<span class="required">* </span></label>
+                                                    <div class="col-md-5">
+                                                        <div class="mt-radio-inline">
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios" id="optionsRadios25" value="option1" checked="true"> Issued
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios" id="optionsRadios26" value="option2" checked=""> Returned
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio ">
+                                                                <input type="radio" name="optionsRadios" id="optionsRadios27" value="option3" checked=""> Overdue
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                                                                          
+                                                                                                                                                                                                                                                    <div class="form-group">
                                         <label class="control-label col-md-3">
                                             Testing frequency
 <span class="required">* </span>
@@ -696,34 +776,10 @@ maxlength="10" value="24"/>
 
                                             </div>
                                         </div>
-                                                                                                                                                                                                                    <div class="form-group">
-    <label class="control-label col-md-3">Last borrowed date<span class="required">* </span></label>
-    <div class="col-md-5">
-        <input type="date" class="form-control" name="LastBorrowedDate"  id="LastBorrowedDate" value="2023-12-17" >
-    </div>
-</div>
-
-
-                                                                                                                                                                                                                                                                                                                                                                                                                     <div class="form-group">
-                                                    <label class="col-md-3 control-label">Status<span class="required">* </span></label>
-                                                    <div class="col-md-5">
-                                                        <div class="mt-radio-inline">
-                                                            <label class="mt-radio">
-                                                                <input type="radio" name="optionsRadios" id="optionsRadios25" value="option1" checked="true"> Issued
-                                                                <span></span>
-                                                            </label>
-                                                            <label class="mt-radio">
-                                                                <input type="radio" name="optionsRadios" id="optionsRadios26" value="option2" checked=""> Returned
-                                                                <span></span>
-                                                            </label>
-                                                            <label class="mt-radio ">
-                                                                <input type="radio" name="optionsRadios" id="optionsRadios27" value="option3" checked=""> Overdue
-                                                                <span></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>                                                                                                                                                                                                                     <div class="form-group">
-    <label class="control-label col-md-3">Testing date
+                                                         
+                                                                                                                                                                    
+                                                                                                                                                                    <div class="form-group">
+    <label class="control-label col-md-3">Last testing date
         <span class="required">* </span>
     </label>
     <div class="col-md-5">
@@ -779,7 +835,7 @@ maxlength="10" value="24"/>
                      
                                         <div style="display: flex; align-items: flex-end; justify-content: center;">
     <div style="width: 500px; text-align: center; display: flex; justify-content: space-between;">
-        <button type="button" style="width: 100%; padding: 10px; margin-right: 10px;text-transform: capitalize;" class="btn btn-lg default" onclick="cancelCurrentPage()">Cancel</button>
+        <button type="button" style="width: 100%; padding: 10px; margin-right: 10px;text-transform: capitalize;" class="btn btn-lg default" onclick="cancelCurrentPage()">Cancel </button>
         <button type="button" style="width: 100%; padding: 10px; text-transform: capitalize;" class="btn btn-lg green" onclick="redirectSubmit()">Submit</button>
     </div>
 </div>
@@ -895,15 +951,15 @@ maxlength="10" value="24"/>
                  });
              });
          </script>
-     <script>
-         function redirectToHistory() {
 
+ 
+     <script>
+         function viewHistory() {
              window.location.href = 'toolhistory.aspx';
          }
-
          function cancelCurrentPage() {
             
-             window.location.reload();
+             window.location.href = 'Dashboard.aspx';
          }
      </script>
           

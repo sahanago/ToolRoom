@@ -33,7 +33,7 @@
             padding-right: 15px;
            
         }
-         
+        
      </style>
     
 
@@ -162,7 +162,7 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="components_color_pickers.html" class="nav-link ">
+                <a href="ReturnTool.aspx" class="nav-link ">
                     <span class="title">Return tool</span>
                     <span class="badge badge-danger"></span>
                 </a>
@@ -266,6 +266,7 @@
                                                 <div class="col-md-3 mt-step-col active">
                                                       
                                                     <div class="mt-step-number bg-white">1</div>
+                                                      <a href="#tab_4_1" class="step-link">
                                                     <div class="mt-step-title  font-grey-cascade">Identifiers</div>
                                                 </div>
                                                 <div class="col-md-3 mt-step-col active">
@@ -294,8 +295,9 @@
                                 
                                 <div class="portlet box green">
                                     <div class="portlet-title">
-    <div class="caption">
-        Identifiers</div>
+                                   <a   class="caption">
+   Identifiers
+</a> 
     <div class="tools">
         <a href="javascript:;" class="collapse"> </a>
     </div>
@@ -303,13 +305,15 @@
 
                                     <div class="portlet-body tabs-below">
                                         <div class="tab-content">
-                                            <div class="tab-pane active" >
+                                            <div class="tab-pane active   "  id="tab_4_1" >
                                                                                                                                                                 <form action="#" id="form_sample_3" class="form-horizontal">
                                    
 <div class="form-group">
     <label class="control-label col-md-3">
-        Barcode #
-        <span class="required">* </span>
+        <a href="Toolview.aspx" target="_blank">
+            Barcode #
+            <span class="required">* </span>
+        </a>
     </label>
     <div class="col-md-5">
         <input 
@@ -318,12 +322,15 @@
             data-required="1" 
             class="form-control" 
             autocomplete="off" 
-             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="12" <!-- Set the desired fixed length -->
-           
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="12" />
        
     </div>
 </div>
+
+
+
+
 
 
 
@@ -371,8 +378,9 @@
 
                                                                      <div class="portlet box green" >
                                     <div class="portlet-title">
-                                        <div class="caption">
-                                           Issued to</div>
+                                        <a href="user.aspx" target="_blank" class="caption">
+            Issued to
+        </a>
                                         <div class="tools">
                                             <a href="javascript:;" class="collapse"> </a>
                                    
@@ -381,7 +389,7 @@
                                     <div class="portlet-body tabs-below" >
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="#tab_5_1" >
-                                                                                                                                                                <form action="#" id="form_sample_3" class="form-horizontal">
+                                                                                                                                                                <form action="#" id="form_sample_4" class="form-horizontal">
                                      
                                   <div class="form-group">
                                 <label class="control-label col-md-3 " >ID / Badge #
@@ -454,24 +462,33 @@ maxlength="16" /> </div>
         Email
     </label>
     <div class="col-md-5">
-        <input 
+       <input 
             type="text" 
             name="Email" 
             data-required="1" 
             class="form-control" 
             maxlength="30" 
             placeholder="example@gmail.com" 
-            onblur="validateEmail()"
+            onblur="validateEmailid('Email', 'emailValidationMsg1')"
         />
-        <span id="emailValidationMsg" style="color: red; display: none;">
+        <span id="emailValidationMsg1" style="color: red; display: none;">
             Please enter a valid Gmail address (e.g., example@gmail.com).
         </span>
     </div>
 </div>
                                                     <div class="form-group">
-    <label class="control-label col-md-3">Issue date<span class="required">* </span></label>
+    <label class="control-label col-md-3">Issued on<span class="required">* </span></label>
     <div class="col-md-5">
         <input type="date" class="form-control" name="issueDate" id="issueDate" />
+    </div>
+</div>
+
+                                                                                                                                                           <div class="form-group">
+    <label class="control-label col-md-3">
+        Default return period
+    </label>
+    <div class="col-md-5">
+        <input type="text" name="period" data-required="1" class="form-control " value="In 1 week" readonly />
     </div>
 </div>
 
@@ -521,8 +538,9 @@ maxlength="16"  /> </div>
                                 
                                    <div class="portlet box green">
                                     <div class="portlet-title">
-                                        <div class="caption">
-                                          Authorized by</div>
+                                       <a href="user.aspx" target="_blank" class="caption">
+            Authorized by
+        </a>
                                         <div class="tools">
                                             <a href="javascript:;" class="collapse"> </a>
                                             
@@ -589,15 +607,15 @@ maxlength="10"/>
     <div class="col-md-5">
         <input 
             type="text" 
-            name="Email" 
+            name="AnotherEmail" 
             data-required="1" 
             class="form-control" 
             maxlength="30" 
-            placeholder="example@gmail.com" 
-            onblur="validEmail()"
+            placeholder="example2@gmail.com" 
+            onblur="validateEmailid('AnotherEmail', 'emailValidationMsg2')"
         />
-        <span id="emailValidMsg" style="color: red; display: none;">
-            Please enter a valid Gmail address (e.g., example@gmail.com).
+        <span id="emailValidationMsg2" style="color: red; display: none;">
+            Please enter a valid Gmail address (e.g., example2@gmail.com).
         </span>
     </div>
 </div>
@@ -717,6 +735,7 @@ maxlength="10"/>
          document.getElementById('returnDate').setAttribute('min', currentDate);
          document.getElementById('returnDate').setAttribute('max', maxDate);
      </script>
+     
      <script>
          $(document).ready(function () {
              // Smooth scroll to the target section when the link is clicked
@@ -731,10 +750,10 @@ maxlength="10"/>
          });
      </script>
           <script>
-              function validateEmail() {
-                  var emailInput = document.getElementsByName("Email")[0];
+              function validateEmailid(inputName, validationMsgId) {
+                  var emailInput = document.getElementsByName(inputName)[0];
                   var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-                  var validationMsg = document.getElementById("emailValidationMsg");
+                  var validationMsg = document.getElementById(validationMsgId);
 
                   if (!emailPattern.test(emailInput.value)) {
                       validationMsg.style.display = "block";
@@ -742,20 +761,10 @@ maxlength="10"/>
                       validationMsg.style.display = "none";
                   }
               }
-              function validEmail() {
-                  var emailInput = document.getElementsByName("Email")[0];
-                  var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-                  var validationMsg = document.getElementById("emailValidMsg");
-
-                  if (!emailPattern.test(emailInput.value)) {
-                      validationMsg.style.display = "block";
-                  } else {
-                      validationMsg.style.display = "none";
-                  }
-              }
+             
               function cancelCurrentPage() {
 
-                  window.location.reload();
+                  window.location.href = 'Dashboard.aspx';
               }
           </script>
  

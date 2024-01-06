@@ -138,6 +138,13 @@
     <Compile Include="Pages\AddInventory.aspx.designer.cs">
       <DependentUpon>AddInventory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Chatbot.aspx.cs">
+      <DependentUpon>Chatbot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Chatbot.aspx.designer.cs">
+      <DependentUpon>Chatbot.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +173,13 @@
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReturnTool.aspx.cs">
+      <DependentUpon>ReturnTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReturnTool.aspx.designer.cs">
+      <DependentUpon>ReturnTool.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\toolhistory.aspx.cs">
       <DependentUpon>toolhistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,12 +187,12 @@
     <Compile Include="Pages\toolhistory.aspx.designer.cs">
       <DependentUpon>toolhistory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Toolinventoryview.aspx.cs">
-      <DependentUpon>Toolinventoryview.aspx</DependentUpon>
+    <Compile Include="Pages\Toolview.aspx.cs">
+      <DependentUpon>Toolview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Toolinventoryview.aspx.designer.cs">
-      <DependentUpon>Toolinventoryview.aspx</DependentUpon>
+    <Compile Include="Pages\Toolview.aspx.designer.cs">
+      <DependentUpon>Toolview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ToolList.aspx.cs">
       <DependentUpon>ToolList.aspx</DependentUpon>
@@ -237,14 +251,58 @@
     <Compile Include="Help.aspx.designer.cs">
       <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Returntool.aspx.cs">
+      <DependentUpon>Returntool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Returntool.aspx.designer.cs">
+      <DependentUpon>Returntool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Userhistory.aspx.cs">
+      <DependentUpon>Userhistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Userhistory.aspx.designer.cs">
+      <DependentUpon>Userhistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Userlist.aspx.cs">
+      <DependentUpon>Userlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Userlist.aspx.designer.cs">
+      <DependentUpon>Userlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Userview.aspx.cs">
+      <DependentUpon>Userview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Userview.aspx.designer.cs">
+      <DependentUpon>Userview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehiclelist.aspx.cs">
+      <DependentUpon>Vehiclelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehiclelist.aspx.designer.cs">
+      <DependentUpon>Vehiclelist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicleview.aspx.cs">
+      <DependentUpon>Vehicleview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicleview.aspx.designer.cs">
+      <DependentUpon>Vehicleview.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddInventory.aspx" />
+    <Content Include="Pages\Chatbot.aspx" />
     <Content Include="Pages\help.aspx" />
     <Content Include="Pages\Index.htm" />
     <Content Include="Pages\IssueTool.aspx" />
+    <Content Include="Pages\ReturnTool.aspx" />
     <Content Include="Pages\toolhistory.aspx" />
-    <Content Include="Pages\Toolinventoryview.aspx" />
+    <Content Include="Pages\Toolview.aspx" />
     <Content Include="Pages\ToolList.aspx" />
     <Content Include="Pages\user.aspx" />
     <Content Include="Themes\assets\apps\css\inbox.css" />
@@ -5995,6 +6053,12 @@
     <Content Include="Historytool.aspx" />
     <Content Include="Issuetool.aspx" />
     <Content Include="Help.aspx" />
+    <Content Include="Returntool.aspx" />
+    <Content Include="Userhistory.aspx" />
+    <Content Include="Userlist.aspx" />
+    <Content Include="Userview.aspx" />
+    <Content Include="Vehiclelist.aspx" />
+    <Content Include="Vehicleview.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -6033,6 +6097,12 @@
     <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data15.json" />
     <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data16.json" />
     <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data17.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data20.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data18.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data21.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data22.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data23.json" />
+    <Content Include="Themes\assets\global\plugins\bootstrap-table\data\data24.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
