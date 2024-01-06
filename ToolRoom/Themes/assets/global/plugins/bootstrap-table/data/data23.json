@@ -1,6 +1,7 @@
 [
 
   {
+<<<<<<< HEAD
     "name": "Aadhi",
     "email": "aadhi@gmail.com",
     "date": "22-12-2023",
@@ -90,6 +91,114 @@
     "date": "10-08-2023",
     "roles": "Reports, inventory management, issue",
     "status": "Active"
+=======
+    "registration": "XYZ789GH",
+    "type": "Truck",
+    "manufacturer": "Ashok leyland",
+    "model": "U 3718",
+    "year": "2008",
+    "fuel": "Diesel",
+    "registrationexpiry": "26-12-2023",
+    "insuranceexpiry": "27-12-2023",
+    "emissionexpiry": "29-06-2024",
+    "status": "Active"
+  },
+  {
+    "registration": "PQ456RS",
+    "type": "Ambulance",
+    "manufacturer": "Tata",
+    "model": "Winger 200",
+    "year": "2018",
+    "fuel": "Diesel",
+    "registrationexpiry": "08-10-2033",
+    "insuranceexpiry": "09-10-2024",
+    "emissionexpiry": "10-06-2024",
+    "status": "Inactive"
+  },
+  {
+    "registration": "XYZ789GH",
+    "type": "Bike",
+    "manufacturer": "Honda",
+    "model": "CD-100",
+    "year": "2012",
+    "fuel": "Petrol",
+    "registrationexpiry": "05-07-2027",
+    "insuranceexpiry": "06-07-2024",
+    "emissionexpiry": "07-01-2024",
+    "status": "Active"
+  },
+  {
+    "registration": "PQ456RS",
+    "type": "Car",
+    "manufacturer": "Hyundai",
+    "model": "Creta",
+    "year": "2015",
+    "fuel": "Petrol",
+    "registrationexpiry": "15-09-2030",
+    "insuranceexpiry": "16-09-2023",
+    "emissionexpiry": "17-03-2024",
+    "status": "Inactive"
+  },
+  {
+    "registration": "XYZ789GH",
+    "type": "Oil tanker",
+    "manufacturer": "Tata",
+    "model": "Intra V50",
+    "year": "2020",
+    "fuel": "Petrol",
+    "registrationexpiry": "02-06-2035",
+    "insuranceexpiry": "03-06-2024",
+    "emissionexpiry": "04-12-2023",
+    "status": "Active"
+  },
+  {
+    "registration": "PQ456RS",
+    "type": "Fire engine",
+    "manufacturer": "Ashok leyland",
+    "model": "Crash Fire Tender (6x6)",
+    "year": "2011",
+    "fuel": "Diesel",
+    "registrationexpiry": "21-07-2026",
+    "insuranceexpiry": "21-07-2024",
+    "emissionexpiry": "21-01-2024",
+    "status": "Inactive"
+  },
+  {
+    "registration": "XYZ789GH",
+    "type": "Bus",
+    "manufacturer": "Tata ",
+    "model": "LP 407",
+    "year": "2013",
+    "fuel": "Diesel",
+    "registrationexpiry": "08-10-2028",
+    "insuranceexpiry": "08-10-2024",
+    "emissionexpiry": "09-04-2024",
+    "status": "Active"
+  },
+  {
+    "registration": "PQ456RS",
+    "type": "Mini truck",
+    "manufacturer": "Ashok leyland",
+    "model": "Dost strong",
+    "year": "2022",
+    "fuel": "Diesel",
+    "registrationexpiry": "27-11-2037",
+    "insuranceexpiry": "27-11-2024",
+    "emissionexpiry": "28-05-2024",
+    "status": "Inactive"
+  },
+  {
+    "registration": "PQ456RS",
+    "type": "Bike",
+    "manufacturer": "Bajaj",
+    "model": "Discover 100",
+    "year": "2011",
+    "fuel": "Petrol",
+    "registrationexpiry": "03-05-2026",
+    "insuranceexpiry": "03-05-2024",
+    "emissionexpiry": "04-11-2024",
+    "status": "Inactive"
+>>>>>>> dac96ecbd10a486e720b4a3b7b5859a9f93c6b93
   }
 
 ]

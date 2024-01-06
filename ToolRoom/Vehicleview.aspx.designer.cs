@@ -11,7 +11,11 @@ namespace ToolRoom
 {
 
 
+<<<<<<< HEAD
     public partial class WebForm12
+=======
+    public partial class WebForm11
+>>>>>>> dac96ecbd10a486e720b4a3b7b5859a9f93c6b93
     {
     }
 }

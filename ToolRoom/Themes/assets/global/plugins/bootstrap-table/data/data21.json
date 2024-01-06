@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "ToolId": 112,
     "BorrowerName": "Jane Smith",
@@ -96,3 +97,99 @@
   }
 
 ]
+=======
+
+  {
+    "name": "Aadhi",
+    "email": "aadhi@gmail.com",
+    "date": "22-12-2023",
+    "roles": "Inventory management",
+    "status": "Active"
+  },
+  {
+    "name": "Ijaz Ahamed ",
+    "email": "ijaz@gmail.com",
+    "date": "18-12-2023",
+    "roles": "Issue, return",
+    "status": "Inactive"
+  },
+  {
+    "name": "Bala",
+    "email": "bala@gmail.com",
+    "date": "10-12-2023",
+    "roles": "Reports, inventory management, issue",
+    "status": "Active"
+  },
+  {
+    "name": "Deva",
+    "email": "deva@gmail.com",
+    "date": "27-11-2023",
+    "roles": "View only",
+    "status": "Inactive"
+  },
+  {
+    "name": "Shivala",
+    "email": "shivala@gmail.com",
+    "date": "19-11-2023",
+    "roles": "Return, issue, reports",
+    "status": "Active"
+  },
+  {
+    "name": "Harish",
+    "email": "harish@gmail.com",
+    "date": "29-10-2023",
+    "roles": "Inventory management, return",
+    "status": "Inactive"
+  },
+  {
+    "name": "Mathan",
+    "email": "mathan@gmail.com",
+    "date": "18-10-2023",
+    "roles": "View only",
+    "status": "Active"
+  },
+  {
+    "name": "Mani Kandan",
+    "email": "mani@gmail.com",
+    "date": "13-10-2023",
+    "roles": "Reports",
+    "status": "Inactive"
+  },
+  {
+    "name": "Hari Haran",
+    "email": "hari@gmail.com",
+    "date": "26-09-2023",
+    "roles": "Return, issue",
+    "status": "Active"
+  },
+  {
+    "name": "Vicky",
+    "email": "vicky@gmail.com",
+    "date": "20-09-2023",
+    "roles": "View only",
+    "status": "Inactive"
+  },
+  {
+    "name": "Vijay",
+    "email": "vijay@gmail.com",
+    "date": "01-09-2023",
+    "roles": "Inventory management",
+    "status": "Active"
+  },
+  {
+    "name": "Mukesh ",
+    "email": "mukesh@gmail.com",
+    "date": "15-08-2023",
+    "roles": "Issue,return",
+    "status": "Inactive"
+  },
+  {
+    "name": "Anand",
+    "email": "anand@gmail.com",
+    "date": "10-08-2023",
+    "roles": "Reports, inventory management, issue",
+    "status": "Active"
+  }
+
+]
+>>>>>>> dac96ecbd10a486e720b4a3b7b5859a9f93c6b93
